@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="Index.css">
+  </head>
+  <body>
+    <div id="header">
+      <button id="menu_btn"><img src="Assets/Images/Menu_Btn.png"></img></button>
+      <div id="nav_bar">
+        <ul>
+          <li>
+            <a href="Home.html">Home</a>
+          </li>
+          <li>
+            <a href="Learned.html">What I have learned</a>
+          </li>
+          <li id="active">
+            <a href="#">WebRec</a>
+          </li>
+        </ul>
+      </div>
+      <div id="logo_container"><img id="logo" src="Assets/Images/Logo.png"/></div>
+      <div id="logo_on_container"><img id="logo_on" src="Assets/Images/Logo_On.png"/></div>
+      <p>Some Title Here</p>
+    </div>
+    <div id="intro">
+      <br>
+      <span style="text-align: center; font-size: 5vw; color:white;">INSERT_PROGRAM_HERE</span>
+      <br>
+      <img id="page_logo" src="Assets/Images/Plan.png"></img>
+      <br><br><br>
+      <p><span style="font-size: 3vw;">Plan</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+            First off, I want to figure out how to access the webcam (without the use of plugins).  After that
+            I will add a record, and stop button.  When the recording is stopped it will be put into a &lt;video&gt;
+            tag.  This way users can preview their work.  After all of that has been finished, the next step
+            will be utilizing the microphone, and also including it into the &lt;video&gt; element.
+            <br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+            After I have the base of the program done, the next step is to enable downloading to disk,
+            AND to drive.  The former one will take some research to figure out how to enable that, but
+            for the latter, I will utilize the REST API (Application Program Interface), which is the
+            main Google API, so that I can download to drive.  I will most likely finish the second one
+            first because it is more useful to be able to download to drive at our school, due to our
+            heavy use of chromebooks.
+            <br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+            The final step will be the GUI (Graphical User Interface).  My current plan for the GUI is to have
+            the container for the application be partition into three parts.  Bottom half, will be the timeline,
+            there will be a video, and audio timeline, I will have to look up how to choose individual frames
+            from the overall picture for the video timeline, and for the audio timeline, I will use the HTML5
+            &lt;canvas&gt; element to draw the audio visulization on the timeline.
+            <br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+            The top half of the application container would be subdiveded into two parts.  One would be 60% of
+            the total width, the other would be 40% of the width.  The larger of the two would contain the download
+            buttons for drive, the direct download, a audio record, a video record, and a record video & audio.  
+            The other pane would contain a video element that functions as a preview for the finished product.
+            <br><br>
+            <span style="font-size: 3vw;">Additional Potential Features (In case I have time)</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+            <ul><br>
+              <li>Being able to have multiple audio layers</li>
+              <li>Being able to adjust the volume of the audio</li>
+              <li>Adding cross platform compatibility</li>
+              <li>The ability to add offsets to the audio layer(s)</li>
+              <li>The ability to download in multiple formats</li>
+              <li>A saving/loading system</li>
+            </ul>
+      </p>
+    </div>
+  </body>
+</html>
