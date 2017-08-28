@@ -11,3 +11,14 @@ navigator.webkitGetUserMedia(
 		alert('getUserMedia failed: Code ' + err.code);
 	}
 );
+document.onkeypress = function (e) {
+    e = e || window.event;
+    switch(e.keycode) {
+      case 68:
+        video.pause();
+	break;
+      case 65:
+	video.play();
+        break;
+    }
+};
