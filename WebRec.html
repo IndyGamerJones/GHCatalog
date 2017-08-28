@@ -27,7 +27,28 @@
     </div>
     <div id="intro">
       <br>
-      <span style="text-align: center; font-size: 5vw; color:white;">INSERT_PROGRAM_HERE</span>
+      <div class="program"></div>
+    <video></video>
+      <script>
+        (function () {
+    navigator.getMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia);
+
+    navigator.getMedia(
+        // constraints
+        {video:true, audio:false},
+
+        // success callback
+        function (mediaStream) {
+            var video = document.getElementsByTagName('video')[0];
+            video.src = window.URL.createObjectURL(mediaStream);
+            video.play();
+        },   
+        //handle error
+        function (error) {
+            console.log(error);
+        })   
+})();
+      </script>
       <br>
       <img id="page_logo" src="Assets/Images/Plan.png"></img>
       <br><br><br>
