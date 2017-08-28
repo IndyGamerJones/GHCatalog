@@ -13,6 +13,6 @@
         },   
         //handle error
         function (error) {
-            console.log(error);
+            document.write(error);
         })   
 })();
