@@ -1,18 +1,13 @@
-(function () {
-    navigator.getMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia);
+var stream;
+var video = document.getElementById('MediaStreamVideo');
 
-    navigator.getMedia(
-        // constraints
-        {video:true, audio:false},
-
-        // success callback
-        function (mediaStream) {
-            var video = document.getElementsByTagName('video')[0];
-            video.src = window.URL.createObjectURL(mediaStream);
-            video.play();
-        },   
-        //handle error
-        function (error) {
-            document.write(error);
-        })   
-})();
+navigator.webkitGetUserMedia(
+	{video: true, audio: true}, // Options
+	function(localMediaStream) { // Success
+		stream = localMediaStream;
+		video.src = window.webkitURL.createObjectURL(stream);
+	},
+	function(err) { // Failure
+		alert('getUserMedia failed: Code ' + err.code);
+	}
+);
