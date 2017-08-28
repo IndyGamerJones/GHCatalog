@@ -22,6 +22,6 @@ document.onkeypress = function (e) {
 	video.play();
     }
     if (key === 69) {
-	video.seek(video.duration() - 10);
+	video.seek(video.duration - 10);
     }
 };
