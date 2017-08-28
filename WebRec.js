@@ -12,8 +12,8 @@ navigator.webkitGetUserMedia(
 	}
 );
 document.onkeypress = function (e) {
-    console.log(e.keycode);
     e = e || window.event;
+    var key = e.keyCode || e.key || e.keyIdentifier;
     if (e.keycode === 65) {
         video.pause;
     }
