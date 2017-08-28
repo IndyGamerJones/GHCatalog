@@ -14,7 +14,11 @@ navigator.webkitGetUserMedia(
 document.onkeypress = function (e) {
     e = e || window.event;
     var key = e.keyCode || e.key || e.keyIdentifier;
-    if (e.keycode === 65) {
-        video.pause;
+    console.log(key);
+    if (key === 65) {
+        video.pause();
+    }
+    if (key === 68) {
+	video.play();
     }
 };
