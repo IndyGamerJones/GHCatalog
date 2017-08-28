@@ -16,4 +16,4 @@ document.onkeypress = function (e) {
     e = e || window.event;
     if (e.keycode === 65) {
         video.pause;
-};
+}
