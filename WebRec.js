@@ -23,4 +23,5 @@ document.onkeypress = function (e) {
     }
     if (key === 69) {
 	video.seek(video.duration() - 10);
+    }
 };
