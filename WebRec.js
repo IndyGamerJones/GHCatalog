@@ -12,13 +12,8 @@ navigator.webkitGetUserMedia(
 	}
 );
 document.onkeypress = function (e) {
+    console.log(e.keycode);
     e = e || window.event;
-    switch(e.keycode) {
-      case 68:
-        video.pause();
-	break;
-      case 65:
-	video.play();
-        break;
-    }
+    if (e.keycode === 65) {
+        video.pause;
 };
