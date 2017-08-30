@@ -38,14 +38,14 @@ var RecordingHandler = {
   },
   ToggleRecording: function() {
     if (this.recordBtn.innerHTML === "Start Recording") {
-      this.recordBtn.innerHTML = "Stop Recording";
+      this.recordBtn.textContext = "Stop Recording";
       this.playBtn.disabled = true;
       this.downloadBtn.disabled = true;
       this.recordedVideo.controls = false;
       this.StartRecording();
       return;
     }
-    this.recordBtn.innerHTML = "Start Recording";
+    this.recordBtn.textContext = "Start Recording";
     this.playBtn.disabled = false;
     this.downloadBtn.disable = false;
     this.recordedVideo.controls = true;
