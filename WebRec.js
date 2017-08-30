@@ -1,4 +1,4 @@
-var Recording_Handler = {
+var RecordingHandler = {
   constructor: function() {
     this.mediaSource = new MediaSource();
     this.recordedBlobs;
