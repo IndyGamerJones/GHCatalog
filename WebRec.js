@@ -37,7 +37,7 @@ var RecordingHandler = {
     console.log("Source buffer successfully created, ", this.sourceBuffer);
   },
   ToggleRecording: function() {
-    if (this.recordBtn.innerHTML === "Start Recording") {
+    if (this.recordBtn.textContext === "Start Recording") {
       this.recordBtn.textContext = "Stop Recording";
       this.playBtn.disabled = true;
       this.downloadBtn.disabled = true;
