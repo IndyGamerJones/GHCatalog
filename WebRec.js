@@ -81,9 +81,10 @@ var RecordingHandler = {
     this.mediaRecorder.onstop = function(e) {
       console.log("Recording stopped with event: ", e);
     };
+    var r = this;
     this.mediaRecorder.ondataavailable = function(e) {
       if (e.data && e.data.size > 0) {
-        this.recordedBlobs.push(e.data);
+         r.recordedBlobs.push(e.data);
       }
     };
     this.mediaRecorder.start(10); // collect 10ms of data
