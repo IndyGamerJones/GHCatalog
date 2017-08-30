@@ -12,10 +12,11 @@ var RecordingHandler = {
     this.pauseBtn = document.getElementById("pause_recorded");
     this.downloadBtn = document.getElementById("download");
 
-    this.recordBtn.onclick = function() {this.ToggleRecording();};
-    this.playBtn.onclick = function() {this.StartRecording();};
-    this.pauseBtn.onclick = function() {this.PauseRecording();};
-    this.downloadBtn.onclick = function() {this.DownloadRecording();};
+    var r = this;
+    this.recordBtn.onclick = function() {r.ToggleRecording();};
+    this.playBtn.onclick = function() {r.StartRecording();};
+    this.pauseBtn.onclick = function() {r.PauseRecording();};
+    this.downloadBtn.onclick = function() {r.DownloadRecording();};
 
     this.constraints = {audio: true, video: true};    
 
@@ -26,7 +27,6 @@ var RecordingHandler = {
       alert('Your browser can not play\n\n' + recordedVideo.src
       + '\n\n media clip. event: ' + JSON.stringify(ev));
     }, true);
-    var r = this;
     navigator.mediaDevices.getUserMedia(this.constraints).
       then(function(str) {r.HandleSuccess(str);}).catch(function (e) {
         console.log("navigator.getUserMedia error: ", e);
