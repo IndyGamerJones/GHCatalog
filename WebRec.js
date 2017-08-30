@@ -107,7 +107,7 @@ var RecordingHandler = {
       this.recordingVideo.src = stream;
     }
   },
-  Download: function() {
+  DownloadRecording: function() {
     var blob = new Blob(this.recordedBlobs, {type: 'video/webm'});
     var url = window.URL.createObjectURL(blob);
     var a = document.createElement('a');
