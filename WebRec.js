@@ -8,7 +8,7 @@ var Recording_Handler = {
 
     this.recordBtn = document.getElementById("record_btn");
     this.playBtn = document.getElementById("play_recorded");
-    this.pauseBtn = document.getElementById("pause_record");
+    this.pauseBtn = document.getElementById("pause_recorded");
     this.downloadBtn = document.getElementById("download");
 
     this.recordBtn.onclick = this.ToggleRecording;
