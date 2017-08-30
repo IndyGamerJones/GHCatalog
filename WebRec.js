@@ -14,7 +14,7 @@ var RecordingHandler = {
 
     var r = this;
     this.recordBtn.onclick = function() {r.ToggleRecording();};
-    this.playBtn.onclick = function() {r.StartRecording();};
+    this.playBtn.onclick = function() {r.Play()};
     this.pauseBtn.onclick = function() {r.PauseRecording();};
     this.downloadBtn.onclick = function() {r.DownloadRecording();};
 
@@ -88,11 +88,11 @@ var RecordingHandler = {
       }
     };
     this.mediaRecorder.start(10); // collect 10ms of data
-    console.log('MediaRecorder started', this.MediaRecorder);
+    console.log('MediaRecorder started', this.mediaRecorder);
   },
   StopRecording: function() {
     this.mediaRecorder.stop();
-    console.log('Recorded Blobs: ', recordedBlobs);
+    console.log('Recorded Blobs: ', this.recordedBlobs);
   },
   Play: function() {
     var superBuffer = new Blob(this.recordedBlobs, {type: 'video/webm'});
