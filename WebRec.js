@@ -54,24 +54,21 @@ var RecordingHandler = {
   },
   StartRecording: function() {
     recordedBlobs = [];
-    var options = {mimeType: 'video/webm;codecs=vp9'};
-    if (MediaRecorder.isTypeSupported(options.mimeType)) {
-      console.log(options.mimeType + " is supported");
-      return;
-    }
     options = {mimeType: 'video/webm;codecs=vp8'};
     if (MediaRecorder.isTypeSupported(options.mimeType)) {
       console.log(options.mimeType + " is supported");
-      return;
     }
     options = {mimeType: 'video/webm'};
     if (MediaRecorder.isTypeSupported(options.mimeType)) {
       console.log(options.mimeType + " is supported");
-      return;
     }
     options = {};
 
     console.log("No mimeTypes supported");
+    var options = {mimeType: 'video/webm;codecs=vp9'};
+    if (MediaRecorder.isTypeSupported(options.mimeType)) {
+      console.log(options.mimeType + " is supported");
+    }
 
     try {
       this.mediaRecorder = new MediaRecorder(window.stream, options);
