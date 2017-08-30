@@ -53,7 +53,7 @@ var RecordingHandler = {
     this.StopRecording();
   },
   StartRecording: function() {
-    recordedBlobs = [];
+    this.recordedBlobs = [];
     options = {mimeType: 'video/webm;codecs=vp8'};
     if (MediaRecorder.isTypeSupported(options.mimeType)) {
       console.log(options.mimeType + " is supported");
