@@ -20,7 +20,7 @@ var RecordingHandler = {
 
     this.mediaSource.addEventListener('sourceopen', this.HandleSourceOpen, false);
 
-    recordedVideo.addEventListener('error', function(ev) {
+    this.recordedVideo.addEventListener('error', function(ev) {
       console.error('MediaRecording.recordedMedia.error()');
       alert('Your browser can not play\n\n' + recordedVideo.src
       + '\n\n media clip. event: ' + JSON.stringify(ev));
