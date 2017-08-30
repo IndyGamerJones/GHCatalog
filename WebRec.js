@@ -96,7 +96,7 @@ var RecordingHandler = {
   },
   Play: function() {
     var superBuffer = new Blob(this.recordedBlobs, {type: 'video/webm'});
-    recordedVideo.src = window.URL.createObjectURL(superBuffer);
+    this.recordedVideo.src = window.URL.createObjectURL(superBuffer);
   },
   HandleSuccess: function(stream) {
     console.log('getUserMedia() got stream: ', stream);
