@@ -28,7 +28,7 @@ var RecordingHandler = {
     }, true);
     var r = this;
     navigator.mediaDevices.getUserMedia(this.constraints).
-      then(e.HandleSuccess).catch(function (e) {
+      then(r.HandleSuccess).catch(function (e) {
         console.log("navigator.getUserMedia error: ", e);
       });
   },
