@@ -12,14 +12,14 @@ var RecordingHandler = {
     this.pauseBtn = document.getElementById("pause_recorded");
     this.downloadBtn = document.getElementById("download");
 
-    this.recordBtn.onclick = this.ToggleRecording;
-    this.playBtn.onclick = this.StartRecording;
-    this.pauseBtn.onclick = this.PauseRecording;
-    this.downloadBtn.onclick = this.DownloadRecording;
+    this.recordBtn.onclick = funcion() {this.ToggleRecording;};
+    this.playBtn.onclick = funcion() {this.StartRecording;};
+    this.pauseBtn.onclick = funcion() {this.PauseRecording;};
+    this.downloadBtn.onclick = funcion() {this.DownloadRecording;};
 
     this.constraints = {audio: true, video: true};    
 
-    this.mediaSource.addEventListener('sourceopen', this.HandleSourceOpen, false);
+    this.mediaSource.addEventListener('sourceopen', funcion(e) {this.HandleSourceOpen(e);}, false);
 
     this.recordedVideo.addEventListener('error', function(ev) {
       console.error('MediaRecording.recordedMedia.error()');
