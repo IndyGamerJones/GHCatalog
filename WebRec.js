@@ -26,7 +26,7 @@ var RecordingHandler = {
       + '\n\n media clip. event: ' + JSON.stringify(ev));
     }, true);
 
-    navigator.mediaDevices.getUserMedia(constraints).
+    navigator.mediaDevices.getUserMedia(this.constraints).
       then(handleSuccess).catch(function (e) {
         console.log("navigator.getUserMedia error: ", error);
       });
