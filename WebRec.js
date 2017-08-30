@@ -1,5 +1,5 @@
 var Recording_Handler = {
-  constructor() {
+  constructor: function() {
     this.mediaSource = new MediaSource();
     this.recordedBlobs;
 
@@ -122,5 +122,5 @@ var Recording_Handler = {
       window.URL.revokeObjectURL(url);
     }, 100);
   }
-
 }
+RecordingHandler.constructor();
