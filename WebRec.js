@@ -2,6 +2,7 @@ var RecordingHandler = {
   constructor: function() {
     this.mediaSource = new MediaSource();
     this.recordedBlobs;
+    this.mediaRecorder;
 
     this.recordingVideo = document.getElementById("recording_screen");
     this.recordedVideo = document.getElementById("output_video");
