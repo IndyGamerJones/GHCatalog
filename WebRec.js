@@ -14,7 +14,7 @@ var RecordingHandler = {
     this.recordBtn.onclick = this.ToggleRecording;
     this.playBtn.onclick = this.StartRecording;
     this.pauseBtn.onclick = this.PauseRecording;
-    this.downloadbtn.onclick = this.DownloadRecording;
+    this.downloadBtn.onclick = this.DownloadRecording;
 
     this.constraints = {audio: true, video: true};    
 
