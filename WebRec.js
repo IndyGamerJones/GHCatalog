@@ -60,7 +60,7 @@ var RecordingHandler = {
     }
     options = {mimeType: 'video/webm'};
     if (MediaRecorder.isTypeSupported(options.mimeType)) {
-      console.log(options.mimeType + " is supported");
+      console.log(options.mimeType + " is supported"); // test
     }
     options = {};
 
