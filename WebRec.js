@@ -3,6 +3,7 @@ var RecordingHandler = {
     this.mediaSource = new MediaSource();
     this.recordedBlobs;
     this.mediaRecorder;
+    this.running = true;
 
     this.recordingVideo = document.getElementById("recording_screen");
     this.recordedVideo = document.getElementById("output_video");
@@ -31,6 +32,14 @@ var RecordingHandler = {
       then(function(str) {r.HandleSuccess(str);}).catch(function (e) {
         console.log("navigator.getUserMedia error: ", e);
       });
+  },
+  PauseRecording: function() {
+    this.running = !this.running;
+    if (this.pauseBtn.textContent === "Pause") {
+      this.pauseBtn.textContent = "Resume");
+      return;
+    }
+    this.pauseBtn.textContent = "Pause";
   },
   HandleSourceOpen: function(e) {
     console.log("Successfully Opened Media Stream....");
@@ -83,7 +92,7 @@ var RecordingHandler = {
     };
     var r = this;
     this.mediaRecorder.ondataavailable = function(e) {
-      if (e.data && e.data.size > 0) {
+      if (e.data && e.data.size > 0 && r.running) {
          r.recordedBlobs.push(e.data);
       }
     };
