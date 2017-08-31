@@ -36,7 +36,7 @@ var RecordingHandler = {
   PauseRecording: function() {
     this.running = !this.running;
     if (this.pauseBtn.textContent === "Pause") {
-      this.pauseBtn.textContent = "Resume");
+      this.pauseBtn.textContent = "Resume";
       return;
     }
     this.pauseBtn.textContent = "Pause";
