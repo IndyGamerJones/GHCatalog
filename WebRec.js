@@ -51,6 +51,7 @@ var RecordingHandler = {
     if (this.recordBtn.textContent === "Start Recording") {
       this.recordBtn.textContent = "Stop Recording";
       this.playBtn.disabled = true;
+      this.recordedVideo.src = "";
       this.downloadBtn.disabled = true;
       this.recordedVideo.controls = false;
       this.StartRecording();
