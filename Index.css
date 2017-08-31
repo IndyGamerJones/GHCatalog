@@ -156,13 +156,13 @@ button {
   margin-top: 20vh;
   padding-bottom: 10vh;
   position: absolute;
-  width: 40vh;
-  height: 40vh;
+  width: 100vh;
+  height: 100vh;
 }
 #output_video {
   margin-top: 20vh;
   padding-bottom: 10vh;
   position: absolute;
-  width: 40vh;
-  height: 40vh;
+  width: 100vh;
+  height: 100vh;
 }
