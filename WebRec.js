@@ -34,12 +34,13 @@ var RecordingHandler = {
       });
   },
   PauseRecording: function() {
-    this.running = !this.running;
     if (this.pauseBtn.textContent === "Pause") {
       this.pauseBtn.textContent = "Resume";
+      this.recordingVideo.pause();
       return;
     }
     this.pauseBtn.textContent = "Pause";
+    this.recordingVideo.play();
   },
   HandleSourceOpen: function(e) {
     console.log("Successfully Opened Media Stream....");
@@ -92,7 +93,7 @@ var RecordingHandler = {
     };
     var r = this;
     this.mediaRecorder.ondataavailable = function(e) {
-      if (e.data && e.data.size > 0 && r.running) {
+      if (e.data && e.data.size > 0) {
          r.recordedBlobs.push(e.data);
       }
     };
