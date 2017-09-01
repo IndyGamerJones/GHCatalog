@@ -28,7 +28,7 @@ var RecordingHandler = {
       alert('Your browser can not play\n\n' + recordedVideo.src
       + '\n\n media clip. event: ' + JSON.stringify(ev));
     }, true);
-    this.recordedVideo.addEventListener('end', function() {r.recordingVideo.width = 100%; r.recordingVideo.height = 100%;};
+    this.recordedVideo.addEventListener('end', function() {r.recordingVideo.width = "100%"; r.recordingVideo.height = "100%;"};
     navigator.mediaDevices.getUserMedia(this.constraints).
       then(function(str) {r.HandleSuccess(str);}).catch(function (e) {
         console.log("navigator.getUserMedia error: ", e);
