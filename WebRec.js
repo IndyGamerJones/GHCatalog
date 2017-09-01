@@ -40,7 +40,7 @@ var RecordingHandler = {
       return;
     }
     this.pauseBtn.textContent = "Pause";
-    this.mediaRecorder.play();
+    this.mediaRecorder.resume();
   },
   HandleSourceOpen: function(e) {
     console.log("Successfully Opened Media Stream....");
