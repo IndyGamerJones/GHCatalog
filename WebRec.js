@@ -28,6 +28,7 @@ var RecordingHandler = {
       alert('Your browser can not play\n\n' + recordedVideo.src
       + '\n\n media clip. event: ' + JSON.stringify(ev));
     }, true);
+    this.recordedVideo.addEventListener('end', function() {r.recordingVideo.width = 100%; r.recordingVideo.height = 100%;};
     navigator.mediaDevices.getUserMedia(this.constraints).
       then(function(str) {r.HandleSuccess(str);}).catch(function (e) {
         console.log("navigator.getUserMedia error: ", e);
@@ -107,6 +108,8 @@ var RecordingHandler = {
   Play: function() {
     var superBuffer = new Blob(this.recordedBlobs, {type: 'video/webm'});
     this.recordedVideo.src = window.URL.createObjectURL(superBuffer);
+    this.recordingVideo.width = 0;
+    this.recordingVideo.height = 0;
   },
   HandleSuccess: function(stream) {
     console.log('getUserMedia() got stream: ', stream);
