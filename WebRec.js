@@ -36,11 +36,11 @@ var RecordingHandler = {
   PauseRecording: function() {
     if (this.pauseBtn.textContent === "Pause") {
       this.pauseBtn.textContent = "Resume";
-      this.recordingVideo.pause();
+      this.mediaRecorder.pause();
       return;
     }
     this.pauseBtn.textContent = "Pause";
-    this.recordingVideo.play();
+    this.mediaRecorder.play();
   },
   HandleSourceOpen: function(e) {
     console.log("Successfully Opened Media Stream....");
