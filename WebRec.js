@@ -53,7 +53,6 @@ var RecordingHandler = {
       this.playBtn.disabled = true;
       this.downloadBtn.disabled = true;
       this.recordedVideo.controls = false;
-      this.recordedVideo.src = "";
       this.StartRecording();
       return;
     }
