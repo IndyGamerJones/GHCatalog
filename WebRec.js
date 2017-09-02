@@ -3,7 +3,6 @@ var RecordingHandler = {
     this.mediaSource = new MediaSource();
     this.recordedBlobs;
     this.mediaRecorder;
-    this.running = true;
 
     this.recordingVideo = document.getElementById("recording_screen");
     this.recordedVideo = document.getElementById("output_video");
@@ -54,6 +53,7 @@ var RecordingHandler = {
       this.playBtn.disabled = true;
       this.downloadBtn.disabled = true;
       this.recordedVideo.controls = false;
+      this.recordedVideo.visible = false;
       this.StartRecording();
       return;
     }
@@ -61,6 +61,7 @@ var RecordingHandler = {
     this.playBtn.disabled = false;
     this.downloadBtn.disable = false;
     this.recordedVideo.controls = true;
+    this.recordedVideo.visible = true;
     this.StopRecording();
   },
   StartRecording: function() {
