@@ -53,7 +53,7 @@ var RecordingHandler = {
       this.playBtn.disabled = true;
       this.downloadBtn.disabled = true;
       this.recordedVideo.controls = false;
-      this.recordedVideo.visible = false;
+      this.recordedVideo.Visibility = "hidden";
       this.StartRecording();
       return;
     }
@@ -61,7 +61,7 @@ var RecordingHandler = {
     this.playBtn.disabled = false;
     this.downloadBtn.disable = false;
     this.recordedVideo.controls = true;
-    this.recordedVideo.visible = true;
+    this.recordedVideo.Visibility = "visible";
     this.StopRecording();
   },
   StartRecording: function() {
