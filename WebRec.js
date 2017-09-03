@@ -106,8 +106,12 @@ var RecordingHandler = {
     this.mediaRecorder.stop();
     var blob = new Blob(this.recordedBlobs, {type: 'video/webm'});
     var url = window.URL.createObjectURL(blob);
-    var DriveBTN = document.getElementsById("save-to-drive");
-    DriveBTN.setAttribute("data-src", url);
+    var DriveBTN = document.getElementsById("save-to-drive_container");
+    gapi.savetodrive.render("save-to-drive_container", {
+          src: url,
+          filename: 'Recording',
+          sitename: 'WebRec'
+        });
   },
   Play: function() {
     var superBuffer = new Blob(this.recordedBlobs, {type: 'video/webm'});
