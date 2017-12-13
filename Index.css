@@ -155,9 +155,6 @@ body {
 #nav_bar > ul > li#active {
   background-color: rgba(0, 30, 55, 0.75);;
 }
-button {
-  margin-top: 100%;
-}
 #recording_screen {
   margin-top: 20vh;
   width: 100%;
