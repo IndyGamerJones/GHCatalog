@@ -59,7 +59,7 @@ var RecordingHandler = {
     }
     this.recordBtn.textContent = "Start Recording";
     this.playBtn.disabled = false;
-    this.downloadBtn.disable = false;
+    this.downloadBtn.disabled = false;
     this.recordedVideo.controls = true;
     this.recordedVideo.style.visibility = "visible";
     this.StopRecording();
